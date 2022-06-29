@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "e078db95-31c6-47fd-979d-03d19da9ca95",
+		"name": "OPTIMOVIL - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10668078"
+	},
+	"item": [
+		{
+			"name": "add-product-likes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "clients_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "products_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/add_product_likes",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"add_product_likes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/categories?name=",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/get_client?id=",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"get_client"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "likes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "clients_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/likes?clients_id=",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"likes"
+					],
+					"query": [
+						{
+							"key": "clients_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/login2",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"login2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "type_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/products?id=&name=&description=&image=&image_path=&stock=&price=&category_id=&type_id=",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": ""
+						},
+						{
+							"key": "name",
+							"value": ""
+						},
+						{
+							"key": "description",
+							"value": ""
+						},
+						{
+							"key": "image",
+							"value": ""
+						},
+						{
+							"key": "image_path",
+							"value": ""
+						},
+						{
+							"key": "stock",
+							"value": ""
+						},
+						{
+							"key": "price",
+							"value": ""
+						},
+						{
+							"key": "category_id",
+							"value": ""
+						},
+						{
+							"key": "type_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "second_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "first_last_nam",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "second_last_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/register_client",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"register_client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove-product-likes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "clients_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "products_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/remove_product_likes",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"remove_product_likes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "types",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/types?name=",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"types"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-TOKEN",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"host": true,
+					"user-agent": true,
+					"content-length": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"secret\":\"abf7755c8b07eee3c1e3bd578e2e5ec8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://optimovilapi.herokuapp.com/api/get-token",
+					"protocol": "https",
+					"host": [
+						"optimovilapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"get-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
