@@ -47,8 +47,8 @@
 			$this->form[] = ['label'=>'Image Path','name'=>'image_path','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Stock','name'=>'stock','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Precio','name'=>'price','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Categoria','name'=>'category_id','type'=>'select2','validation'=>'required|exists:categories','width'=>'col-sm-10','datatable'=>'categories,name'];
-			$this->form[] = ['label'=>'Tipo','name'=>'type_id','type'=>'select2','validation'=>'required|exists:tipes','width'=>'col-sm-10','datatable'=>'types,name'];
+			$this->form[] = ['label'=>'Categoria','name'=>'category_id','type'=>'select2','validation'=>'required|exists:categories,id','width'=>'col-sm-10','datatable'=>'categories,name'];
+			$this->form[] = ['label'=>'Tipo','name'=>'type_id','type'=>'select2','validation'=>'required|exists:types,id','width'=>'col-sm-10','datatable'=>'types,name'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -59,8 +59,8 @@
 			//$this->form[] = ['label'=>'Image Path','name'=>'image_path','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Stock','name'=>'stock','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Precio','name'=>'price','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Categoria','name'=>'category_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'categories,name'];
-			//$this->form[] = ['label'=>'Tipo','name'=>'type_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'types,name'];
+			//$this->form[] = ['label'=>'Categoria','name'=>'category_id','type'=>'select2','validation'=>'required|exists:categories,id,\'.$this->category_id.\'','width'=>'col-sm-10','datatable'=>'categories,name'];
+			//$this->form[] = ['label'=>'Tipo','name'=>'type_id','type'=>'select2','validation'=>'required','width'=>'col-sm-10','datatable'=>'types,name'];
 			# OLD END FORM
 
 			/*

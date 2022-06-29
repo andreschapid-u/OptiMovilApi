@@ -48,6 +48,7 @@
 			$this->form[] = ['label'=>'Correo','name'=>'email','type'=>'email','validation'=>'required|min:8|max:255|email|unique:clients','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
 			$this->form[] = ['label'=>'Teléfono','name'=>'phone_number','type'=>'number','validation'=>'required|numeric|digits_between:7,16','width'=>'col-sm-10','help'=>'Minimum 5 characters. Please leave empty if you did not change the password.'];
 			$this->form[] = ['label'=>'Contraseña','name'=>'password','type'=>'password','validation'=>'required|min:8|max:32','width'=>'col-sm-10','placeholder'=>'You can only enter the number only'];
+			$this->form[] = ['label'=>'Producto','name'=>'products_id','type'=>'select2','validation'=>'required','width'=>'col-sm-9','datatable'=>'products,name','relationship_table'=>'product_fav_client'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM

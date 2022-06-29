@@ -15,10 +15,11 @@ class CreateProductFavClientTable extends Migration
     {
         Schema::create('product_fav_client', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('client_id')->unique();
-            $table->foreignId('product_id')->unique();
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreignId('clients_id');
+            $table->foreignId('products_id');
+            $table->foreign('clients_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->foreign('products_id')->references('id')->on('products')->onDelete('cascade');
+            $table->unique(['clients_id','products_id']);
             $table->timestamps();
         });
     }
