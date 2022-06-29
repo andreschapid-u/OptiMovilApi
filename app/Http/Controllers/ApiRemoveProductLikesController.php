@@ -5,12 +5,12 @@
 		use DB;
 		use CRUDBooster;
 
-		class ApiFavoritesController extends \crocodicstudio\crudbooster\controllers\ApiController {
+		class ApiRemoveProductLikesController extends \crocodicstudio\crudbooster\controllers\ApiController {
 
 		    function __construct() {    
 				$this->table       = "product_fav_client";        
-				$this->permalink   = "favorites";    
-				$this->method_type = "get";    
+				$this->permalink   = "remove_product_likes";    
+				$this->method_type = "post";    
 		    }
 		
 

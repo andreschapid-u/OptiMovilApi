@@ -5,11 +5,11 @@
 		use DB;
 		use CRUDBooster;
 
-		class ApiLoginController extends \crocodicstudio\crudbooster\controllers\ApiController {
+		class ApiAddProductLikesController extends \crocodicstudio\crudbooster\controllers\ApiController {
 
 		    function __construct() {    
-				$this->table       = "clients";        
-				$this->permalink   = "login";    
+				$this->table       = "product_fav_client";        
+				$this->permalink   = "add_product_likes";    
 				$this->method_type = "post";    
 		    }
 		
