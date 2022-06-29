@@ -12,26 +12,35 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Volcando datos para la tabla optimovilapi.categories: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.categories: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 REPLACE INTO `categories` (`id`, `created_at`, `updated_at`, `name`) VALUES
-	(1, '2022-06-26 14:27:52', NULL, 'Hombre');
+	(1, '2022-06-26 14:27:52', NULL, 'Hombre'),
+	(2, '2022-06-29 06:11:19', '2022-06-29 06:11:27', 'Mujere'),
+	(3, '2022-06-29 06:11:37', NULL, 'Niño'),
+	(4, '2022-06-29 06:11:44', NULL, 'Niña'),
+	(5, '2022-06-29 06:11:53', NULL, 'TODOS');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.clients: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.clients: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
 REPLACE INTO `clients` (`id`, `created_at`, `updated_at`, `name`, `second_name`, `first_last_nam`, `second_last_name`, `email`, `password`, `phone_number`) VALUES
-	(1, '2022-06-28 14:36:09', '2022-06-28 14:39:32', 'Carlos', 'Andres', 'Chapid', 'Inga', 'carloschapid@unicauca.edu.co', '$2y$10$4R/vJWu.X4F13MdpqP8PsuKmvs4Ne0Wyop4ltAH9j0MJ2evSYUWdu', '3122229900');
+	(1, '2022-06-28 14:36:09', '2022-06-29 13:24:47', 'Carlos', 'Andres', 'Chapid', 'Inga', 'carloschapid@unicauca.edu.co', '$2y$10$76lcCXzk9kyF4oev01BjCu2hPYRHv6ULJKfx46z6afxunVJt3EjDy', '3122229900'),
+	(2, '2022-06-29 06:13:17', '2022-06-29 13:28:58', 'Andres', 'Andres', 'Chapid', 'Inga', 'admin@optimovil.com', '$2y$10$TAF.5LgrS6wej78fRK1Z3uWi1epoW1MvBM7LjK6GTw8Rslg/qswvy', '123456123');
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.cms_apicustom: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.cms_apicustom: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `cms_apicustom` DISABLE KEYS */;
 REPLACE INTO `cms_apicustom` (`id`, `permalink`, `tabel`, `aksi`, `kolom`, `orderby`, `sub_query_1`, `sql_where`, `nama`, `keterangan`, `parameter`, `created_at`, `updated_at`, `method_type`, `parameters`, `responses`) VALUES
-	(1, 'products', 'products', 'list', NULL, NULL, NULL, NULL, 'products', NULL, NULL, NULL, NULL, 'get', 'a:9:{i:0;a:5:{s:4:"name";s:2:"id";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:1;a:5:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:2;a:5:{s:4:"name";s:11:"description";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:3;a:5:{s:4:"name";s:5:"image";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}i:4;a:5:{s:4:"name";s:10:"image_path";s:4:"type";s:5:"image";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}i:5;a:5:{s:4:"name";s:5:"stock";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:6;a:5:{s:4:"name";s:5:"price";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:7;a:5:{s:4:"name";s:11:"category_id";s:4:"type";s:5:"array";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:8;a:5:{s:4:"name";s:7:"type_id";s:4:"type";s:5:"array";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}}', 'a:11:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"description";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:5:"image";s:4:"type";s:5:"image";s:8:"subquery";N;s:4:"used";s:1:"1";}i:4;a:4:{s:4:"name";s:10:"image_path";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:5;a:4:{s:4:"name";s:5:"stock";s:4:"type";s:3:"int";s:8:"subquery";N;s:4:"used";s:1:"1";}i:6;a:4:{s:4:"name";s:5:"price";s:4:"type";s:3:"int";s:8:"subquery";N;s:4:"used";s:1:"1";}i:7;a:4:{s:4:"name";s:11:"category_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:8;a:4:{s:4:"name";s:7:"type_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:9;a:4:{s:4:"name";s:10:"categories";s:4:"type";s:6:"custom";s:8:"subquery";s:58:"SELECT categories.* FROM categories WHERE id = category_id";s:4:"used";s:1:"1";}i:10;a:4:{s:4:"name";s:5:"types";s:4:"type";s:6:"custom";s:8:"subquery";s:47:"SELECT types.name FROM types WHERE id = type_id";s:4:"used";s:1:"1";}}'),
-	(2, 'types', 'types', 'list', NULL, NULL, NULL, NULL, 'types', NULL, NULL, NULL, NULL, 'get', 'a:2:{i:0;a:5:{s:4:"name";s:2:"id";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}i:1;a:5:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}}', 'a:2:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}}'),
-	(3, 'login', 'clients', 'detail', NULL, NULL, NULL, NULL, 'login', NULL, NULL, NULL, NULL, 'post', 'a:2:{i:0;a:5:{s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:6:"config";s:35:"required|email|exists:clients,email";s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:1;a:5:{s:4:"name";s:8:"password";s:4:"type";s:8:"password";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}}', 'a:8:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"second_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:14:"first_last_nam";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:4;a:4:{s:4:"name";s:16:"second_last_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:5;a:4:{s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:8:"subquery";N;s:4:"used";s:1:"1";}i:6;a:4:{s:4:"name";s:8:"password";s:4:"type";s:8:"password";s:8:"subquery";N;s:4:"used";s:1:"1";}i:7;a:4:{s:4:"name";s:12:"phone_number";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}}'),
-	(4, 'categories', 'categories', 'list', NULL, NULL, NULL, NULL, 'categories', NULL, NULL, NULL, NULL, 'get', 'a:2:{i:0;a:5:{s:4:"name";s:2:"id";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:1;a:5:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}}', 'a:2:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}}'),
-	(5, 'favorites', 'product_fav_client', 'list', NULL, NULL, NULL, NULL, 'favorites', NULL, NULL, NULL, NULL, 'get', 'a:3:{i:0;a:5:{s:4:"name";s:2:"id";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}i:1;a:5:{s:4:"name";s:9:"client_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"0";}i:2;a:5:{s:4:"name";s:10:"product_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}}', 'a:4:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:9:"client_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:10:"product_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:7:"product";s:4:"type";s:6:"string";s:8:"subquery";s:56:"SELECT products.name FROM products WHERE id = product_id";s:4:"used";s:1:"1";}}');
+	(6, 'login2', 'clients', 'detail', NULL, NULL, NULL, NULL, 'login2', NULL, NULL, NULL, NULL, 'post', 'a:2:{i:0;a:5:{s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:6:"config";s:35:"required|email|exists:clients,email";s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:1;a:5:{s:4:"name";s:8:"password";s:4:"type";s:8:"password";s:6:"config";s:14:"required|min:8";s:8:"required";s:1:"1";s:4:"used";s:1:"1";}}', 'a:9:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"second_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:14:"first_last_nam";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:4;a:4:{s:4:"name";s:16:"second_last_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:5;a:4:{s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:8:"subquery";N;s:4:"used";s:1:"1";}i:6;a:4:{s:4:"name";s:8:"password";s:4:"type";s:8:"password";s:8:"subquery";N;s:4:"used";s:1:"1";}i:7;a:4:{s:4:"name";s:12:"phone_number";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:8;a:4:{s:4:"name";s:8:"products";s:4:"type";s:6:"custom";s:8:"subquery";s:113:"SELECT * FROM products as p inner join product_fav_client as pf on pf.products_id = p.id where id = pf.clients_id";s:4:"used";s:1:"1";}}'),
+	(7, 'likes', 'product_fav_client', 'list', NULL, NULL, NULL, NULL, 'likes', NULL, NULL, NULL, NULL, 'get', 'a:1:{i:0;a:5:{s:4:"name";s:10:"clients_id";s:4:"type";s:7:"integer";s:6:"config";s:26:"required|exists:clients,id";s:8:"required";s:1:"1";s:4:"used";s:1:"1";}}', 'a:4:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:10:"clients_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"products_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:7:"product";s:4:"type";s:6:"string";s:8:"subquery";s:57:"SELECT products.name FROM products WHERE id = products_id";s:4:"used";s:1:"1";}}'),
+	(8, 'types', 'types', 'list', NULL, NULL, NULL, NULL, 'types', NULL, NULL, NULL, NULL, 'get', 'a:1:{i:0;a:5:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}}', 'a:2:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}}'),
+	(10, 'categories', 'categories', 'list', NULL, NULL, NULL, NULL, 'categories', NULL, NULL, NULL, NULL, 'get', 'a:1:{i:0;a:5:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}}', 'a:2:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}}'),
+	(11, 'products', 'products', 'list', NULL, NULL, NULL, NULL, 'products', NULL, NULL, NULL, NULL, 'get', 'a:9:{i:0;a:5:{s:4:"name";s:2:"id";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}i:1;a:5:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:2;a:5:{s:4:"name";s:11:"description";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:3;a:5:{s:4:"name";s:5:"image";s:4:"type";s:5:"image";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}i:4;a:5:{s:4:"name";s:10:"image_path";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"0";}i:5;a:5:{s:4:"name";s:5:"stock";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:6;a:5:{s:4:"name";s:5:"price";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:7;a:5:{s:4:"name";s:11:"category_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}i:8;a:5:{s:4:"name";s:7:"type_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"0";s:4:"used";s:1:"1";}}', 'a:11:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"description";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:5:"image";s:4:"type";s:5:"image";s:8:"subquery";N;s:4:"used";s:1:"1";}i:4;a:4:{s:4:"name";s:10:"image_path";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:5;a:4:{s:4:"name";s:5:"stock";s:4:"type";s:3:"int";s:8:"subquery";N;s:4:"used";s:1:"1";}i:6;a:4:{s:4:"name";s:5:"price";s:4:"type";s:3:"int";s:8:"subquery";N;s:4:"used";s:1:"1";}i:7;a:4:{s:4:"name";s:11:"category_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:8;a:4:{s:4:"name";s:7:"type_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:9;a:4:{s:4:"name";s:4:"type";s:4:"type";s:6:"string";s:8:"subquery";s:47:"SELECT types.name FROM types WHERE id = type_id";s:4:"used";s:1:"1";}i:10;a:4:{s:4:"name";s:8:"category";s:4:"type";s:6:"string";s:8:"subquery";s:61:"SELECT categories.name FROM categories WHERE id = category_id";s:4:"used";s:1:"1";}}'),
+	(12, 'add_product_likes', 'product_fav_client', 'save_add', NULL, NULL, NULL, NULL, 'add-product-likes', NULL, NULL, NULL, NULL, 'post', 'a:2:{i:0;a:5:{s:4:"name";s:10:"clients_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:1;a:5:{s:4:"name";s:11:"products_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}}', 'a:3:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:10:"clients_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"products_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}}'),
+	(13, 'remove_product_likes', 'product_fav_client', 'delete', NULL, NULL, NULL, NULL, 'remove-product-likes', NULL, NULL, NULL, NULL, 'post', 'a:2:{i:0;a:5:{s:4:"name";s:10:"clients_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:1;a:5:{s:4:"name";s:11:"products_id";s:4:"type";s:7:"integer";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}}', 'a:3:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:10:"clients_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"products_id";s:4:"type";s:7:"integer";s:8:"subquery";N;s:4:"used";s:1:"1";}}'),
+	(14, 'register_client', 'clients', 'save_add', NULL, NULL, NULL, NULL, 'register-client', NULL, NULL, NULL, NULL, 'post', 'a:7:{i:0;a:5:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:1;a:5:{s:4:"name";s:11:"second_name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:2;a:5:{s:4:"name";s:14:"first_last_nam";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:3;a:5:{s:4:"name";s:16:"second_last_name";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:4;a:5:{s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:5;a:5:{s:4:"name";s:8:"password";s:4:"type";s:8:"password";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}i:6;a:5:{s:4:"name";s:12:"phone_number";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}}', 'a:9:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"second_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:14:"first_last_nam";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:4;a:4:{s:4:"name";s:16:"second_last_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:5;a:4:{s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:8:"subquery";N;s:4:"used";s:1:"1";}i:6;a:4:{s:4:"name";s:8:"password";s:4:"type";s:8:"password";s:8:"subquery";N;s:4:"used";s:1:"1";}i:7;a:4:{s:4:"name";s:12:"phone_number";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:8;a:4:{s:4:"name";s:8:"products";s:4:"type";s:6:"custom";s:8:"subquery";s:113:"SELECT * FROM products as p inner join product_fav_client as pf on pf.products_id = p.id where id = pf.clients_id";s:4:"used";s:1:"1";}}'),
+	(15, 'get_client', 'clients', 'detail', NULL, NULL, NULL, NULL, 'get-client', NULL, NULL, NULL, NULL, 'get', 'a:1:{i:0;a:5:{s:4:"name";s:2:"id";s:4:"type";s:6:"string";s:6:"config";N;s:8:"required";s:1:"1";s:4:"used";s:1:"1";}}', 'a:9:{i:0;a:4:{s:4:"name";s:2:"id";s:4:"type";s:6:"bigint";s:8:"subquery";N;s:4:"used";s:1:"1";}i:1;a:4:{s:4:"name";s:4:"name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:2;a:4:{s:4:"name";s:11:"second_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:3;a:4:{s:4:"name";s:14:"first_last_nam";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:4;a:4:{s:4:"name";s:16:"second_last_name";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:5;a:4:{s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:8:"subquery";N;s:4:"used";s:1:"1";}i:6;a:4:{s:4:"name";s:8:"password";s:4:"type";s:8:"password";s:8:"subquery";N;s:4:"used";s:1:"1";}i:7;a:4:{s:4:"name";s:12:"phone_number";s:4:"type";s:6:"string";s:8:"subquery";N;s:4:"used";s:1:"1";}i:8;a:4:{s:4:"name";s:8:"products";s:4:"type";s:6:"custom";s:8:"subquery";s:113:"SELECT * FROM products as p inner join product_fav_client as pf on pf.products_id = p.id where id = pf.clients_id";s:4:"used";s:1:"1";}}');
 /*!40000 ALTER TABLE `cms_apicustom` ENABLE KEYS */;
 
 -- Volcando datos para la tabla optimovilapi.cms_apikey: ~1 rows (aproximadamente)
@@ -54,7 +63,7 @@ REPLACE INTO `cms_email_templates` (`id`, `name`, `slug`, `subject`, `content`, 
 	(1, 'Email Template Forgot Password Backend', 'forgot_password_backend', NULL, '<p>Hi,</p><p>Someone requested forgot password, here is your new password : </p><p>[password]</p><p><br></p><p>--</p><p>Regards,</p><p>Admin</p>', '[password]', 'System', 'system@crudbooster.com', NULL, '2022-06-23 18:28:49', NULL);
 /*!40000 ALTER TABLE `cms_email_templates` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.cms_logs: ~20 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.cms_logs: ~55 rows (aproximadamente)
 /*!40000 ALTER TABLE `cms_logs` DISABLE KEYS */;
 REPLACE INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `details`, `id_cms_users`, `created_at`, `updated_at`) VALUES
 	(1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', ' logout', '', 1, '2022-06-23 18:26:06', NULL),
@@ -77,7 +86,41 @@ REPLACE INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `
 	(18, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/menu_management/edit-save/2', 'Actualizar información TIPOS en Menu Management', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>type</td><td>Route</td><td>Module</td></tr></tbody></table>', 1, '2022-06-28 19:21:40', NULL),
 	(19, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/module_generator/delete/17', 'Eliminar información FAVORITOS CLIENTE en Module Generator', '', 1, '2022-06-28 19:29:35', NULL),
 	(20, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-28 19:36:40', NULL),
-	(21, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/login', 'Ingreso de admin@optimovil.com desde la Dirección IP 127.0.0.1', '', 1, '2022-06-29 04:32:57', NULL);
+	(21, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/login', 'Ingreso de admin@optimovil.com desde la Dirección IP 127.0.0.1', '', 1, '2022-06-29 04:32:57', NULL),
+	(22, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/products/delete-image', 'Eliminar la imagen de Producto prueba en PRODUCTOS', '', 1, '2022-06-29 06:01:38', NULL),
+	(23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/products/edit-save/1', 'Actualizar información Producto prueba en PRODUCTOS', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>image_path</td><td></td><td>uploads/1/2022-06/avatar.jpg</td></tr></tbody></table>', 1, '2022-06-29 06:03:09', NULL),
+	(24, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/products/delete-image', 'Eliminar la imagen de Producto prueba en PRODUCTOS', '', 1, '2022-06-29 06:03:22', NULL),
+	(25, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/products/edit-save/1', 'Actualizar información Producto prueba en PRODUCTOS', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>image_path</td><td></td><td>uploads/1/2022-06/avatar.jpg</td></tr><tr><td>type_id</td><td>3</td><td>4</td></tr></tbody></table>', 1, '2022-06-29 06:06:28', NULL),
+	(26, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/types/delete/1', 'Eliminar información Marco en TIPOS', '', 1, '2022-06-29 06:10:48', NULL),
+	(27, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/types/add-save', 'Añadir nueva información Marco en TIPOS', '', 1, '2022-06-29 06:10:55', NULL),
+	(28, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/types/edit-save/3', 'Actualizar información Accesorio en TIPOS', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Accesorios</td><td>Accesorio</td></tr></tbody></table>', 1, '2022-06-29 06:11:07', NULL),
+	(29, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/categories/add-save', 'Añadir nueva información Mujeres en CATEGORIAS', '', 1, '2022-06-29 06:11:19', NULL),
+	(30, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/categories/edit-save/2', 'Actualizar información Mujere en CATEGORIAS', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Mujeres</td><td>Mujere</td></tr></tbody></table>', 1, '2022-06-29 06:11:27', NULL),
+	(31, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/categories/add-save', 'Añadir nueva información Niño en CATEGORIAS', '', 1, '2022-06-29 06:11:37', NULL),
+	(32, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/categories/add-save', 'Añadir nueva información Niña en CATEGORIAS', '', 1, '2022-06-29 06:11:44', NULL),
+	(33, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/categories/add-save', 'Añadir nueva información TODOS en CATEGORIAS', '', 1, '2022-06-29 06:11:53', NULL),
+	(34, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/clients/add-save', 'Añadir nueva información Andres en CLIENTES', '', 1, '2022-06-29 06:13:17', NULL),
+	(35, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 06:36:51', NULL),
+	(36, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 06:37:06', NULL),
+	(37, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/delete/1', 'Eliminar información 1 en FAVORITOS CLIENTE', '', 1, '2022-06-29 06:39:42', NULL),
+	(38, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 06:39:51', NULL),
+	(39, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/products/add-save', 'Añadir nueva información Producto prueba 2 en PRODUCTOS', '', 1, '2022-06-29 06:40:37', NULL),
+	(40, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:00:20', NULL),
+	(41, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/delete/4', 'Eliminar información 4 en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:01:50', NULL),
+	(42, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:01:58', NULL),
+	(43, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/delete/5', 'Eliminar información 5 en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:24:31', NULL),
+	(44, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/delete/3', 'Eliminar información 3 en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:24:34', NULL),
+	(45, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/delete/2', 'Eliminar información 2 en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:24:37', NULL),
+	(46, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:24:47', NULL),
+	(47, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 07:24:54', NULL),
+	(48, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/login', 'Ingreso de admin@optimovil.com desde la Dirección IP 127.0.0.1', '', 1, '2022-06-29 12:37:01', NULL),
+	(49, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 12:45:03', NULL),
+	(50, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/product_fav_client/add-save', 'Añadir nueva información  en FAVORITOS CLIENTE', '', 1, '2022-06-29 12:45:11', NULL),
+	(51, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/module_generator/delete/19', 'Eliminar información likes en Module Generator', '', 1, '2022-06-29 13:19:33', NULL),
+	(52, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/clients/edit-save/1', 'Actualizar información Carlos en CLIENTES', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>password</td><td>$2y$10$4R/vJWu.X4F13MdpqP8PsuKmvs4Ne0Wyop4ltAH9j0MJ2evSYUWdu</td><td>$2y$10$vD7aflHobrVRAfF3d1ieW.flnee/IXoJlsmFUty/POxs9/r8tZ/2S</td></tr></tbody></table>', 1, '2022-06-29 13:23:38', NULL),
+	(53, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/clients/edit-save/1', 'Actualizar información Carlos en CLIENTES', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>password</td><td>$2y$10$vD7aflHobrVRAfF3d1ieW.flnee/IXoJlsmFUty/POxs9/r8tZ/2S</td><td>$2y$10$oimPZn5h3MBA3pYaJRsY8OdPeKfVDpnHb6RtvmquMPG.l.GG0/sRC</td></tr></tbody></table>', 1, '2022-06-29 13:24:27', NULL),
+	(54, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/clients/edit-save/1', 'Actualizar información Carlos en CLIENTES', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>password</td><td>$2y$10$oimPZn5h3MBA3pYaJRsY8OdPeKfVDpnHb6RtvmquMPG.l.GG0/sRC</td><td>$2y$10$76lcCXzk9kyF4oev01BjCu2hPYRHv6ULJKfx46z6afxunVJt3EjDy</td></tr></tbody></table>', 1, '2022-06-29 13:24:47', NULL),
+	(55, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36', 'http://optimovilapi.test/admin/clients/edit-save/2', 'Actualizar información Andres en CLIENTES', '<table class="table table-striped"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>password</td><td>$2y$10$EH27TxTcOMbFJelqsnyA0.ZBucG9qQQbK6lhyMbMAUkZjTrCan1yi</td><td>$2y$10$TAF.5LgrS6wej78fRK1Z3uWi1epoW1MvBM7LjK6GTw8Rslg/qswvy</td></tr></tbody></table>', 1, '2022-06-29 13:28:58', NULL);
 /*!40000 ALTER TABLE `cms_logs` ENABLE KEYS */;
 
 -- Volcando datos para la tabla optimovilapi.cms_menus: ~5 rows (aproximadamente)
@@ -90,7 +133,7 @@ REPLACE INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent
 	(7, 'FAVORITOS CLIENTE', 'Route', 'AdminProductFavClientControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 5, '2022-06-28 19:30:06', NULL);
 /*!40000 ALTER TABLE `cms_menus` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.cms_menus_privileges: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.cms_menus_privileges: ~8 rows (aproximadamente)
 /*!40000 ALTER TABLE `cms_menus_privileges` DISABLE KEYS */;
 REPLACE INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
 	(1, 1, 1),
@@ -99,10 +142,11 @@ REPLACE INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) 
 	(5, 5, 1),
 	(6, 6, 1),
 	(10, 2, 1),
-	(11, 7, 1);
+	(11, 7, 1),
+	(12, 8, 1);
 /*!40000 ALTER TABLE `cms_menus_privileges` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.cms_moduls: ~18 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.cms_moduls: ~19 rows (aproximadamente)
 /*!40000 ALTER TABLE `cms_moduls` DISABLE KEYS */;
 REPLACE INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controller`, `is_protected`, `is_active`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 'Notifications', 'fa fa-cog', 'notifications', 'cms_notifications', 'NotificationsController', 1, 1, '2022-06-23 18:28:49', NULL, NULL),
@@ -122,7 +166,8 @@ REPLACE INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controll
 	(15, 'PRODUCTOS', 'fa fa-product-hunt', 'products', 'products', 'AdminProductsController', 0, 0, '2022-06-26 14:23:23', NULL, NULL),
 	(16, 'CLIENTES', 'fa fa-cog', 'clients', 'clients', 'AdminClientsController', 0, 0, '2022-06-26 14:50:41', NULL, NULL),
 	(17, 'FAVORITOS CLIENTE', 'fa fa-star', 'product_fav_client', 'product_fav_client', 'AdminProductFavClientController', 0, 0, '2022-06-28 14:10:46', NULL, '2022-06-28 19:29:35'),
-	(18, 'FAVORITOS CLIENTE', 'fa fa-star', 'product_fav_client', 'product_fav_client', 'AdminProductFavClientController', 0, 0, '2022-06-28 19:30:06', NULL, NULL);
+	(18, 'FAVORITOS CLIENTE', 'fa fa-star', 'product_fav_client', 'product_fav_client', 'AdminProductFavClientController', 0, 0, '2022-06-28 19:30:06', NULL, NULL),
+	(19, 'likes', 'fa fa-glass', 'clients-likes', 'clients', 'AdminClientsLikesController', 0, 0, '2022-06-29 13:01:53', NULL, '2022-06-29 13:19:33');
 /*!40000 ALTER TABLE `cms_moduls` ENABLE KEYS */;
 
 -- Volcando datos para la tabla optimovilapi.cms_notifications: ~0 rows (aproximadamente)
@@ -135,7 +180,7 @@ REPLACE INTO `cms_privileges` (`id`, `name`, `is_superadmin`, `theme_color`, `cr
 	(1, 'Super Administrator', 1, 'skin-red', '2022-06-23 18:28:49', NULL);
 /*!40000 ALTER TABLE `cms_privileges` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.cms_privileges_roles: ~18 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.cms_privileges_roles: ~19 rows (aproximadamente)
 /*!40000 ALTER TABLE `cms_privileges_roles` DISABLE KEYS */;
 REPLACE INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, `is_edit`, `is_delete`, `id_cms_privileges`, `id_cms_moduls`, `created_at`, `updated_at`) VALUES
 	(1, 1, 0, 0, 0, 0, 1, 1, '2022-06-23 18:28:49', NULL),
@@ -155,7 +200,8 @@ REPLACE INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`,
 	(15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
 	(16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL),
 	(17, 1, 1, 1, 1, 1, 1, 17, NULL, NULL),
-	(18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL);
+	(18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL),
+	(19, 1, 1, 1, 1, 1, 1, 19, NULL, NULL);
 /*!40000 ALTER TABLE `cms_privileges_roles` ENABLE KEYS */;
 
 -- Volcando datos para la tabla optimovilapi.cms_settings: ~16 rows (aproximadamente)
@@ -237,7 +283,7 @@ REPLACE INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(60, '2022_06_23_193748_add_column_to_categories_table', 3),
 	(61, '2022_06_23_194044_add_column_to_products_table', 4),
 	(62, '2022_06_23_195357_add_column_to_clients_table', 4),
-	(63, '2022_06_23_195848_create_product_fav_client_table', 4);
+	(65, '2022_06_23_195848_create_product_fav_client_table', 5);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
 -- Volcando datos para la tabla optimovilapi.password_resets: ~0 rows (aproximadamente)
@@ -248,25 +294,29 @@ REPLACE INTO `migrations` (`id`, `migration`, `batch`) VALUES
 /*!40000 ALTER TABLE `personal_access_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `personal_access_tokens` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.products: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.products: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 REPLACE INTO `products` (`id`, `created_at`, `updated_at`, `name`, `description`, `image`, `image_path`, `stock`, `price`, `category_id`, `type_id`) VALUES
-	(1, '2022-06-26 14:49:24', NULL, 'Producto prueba', 'producto prueba 1', 1, 'uploads/1/2022-06/avatar.jpg', 20, 200000, 1, 3);
+	(1, '2022-06-26 14:49:24', '2022-06-29 06:06:28', 'Producto prueba', 'producto prueba 1', 1, 'uploads/1/2022-06/avatar.jpg', 20, 200000, 1, 4),
+	(2, '2022-06-29 06:40:37', NULL, 'Producto prueba 2', 'producto prueba 2', 2, 'uploads/1/2022-06/avatar.jpg', 23, 233332, 5, 2);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
--- Volcando datos para la tabla optimovilapi.product_fav_client: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla optimovilapi.product_fav_client: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `product_fav_client` DISABLE KEYS */;
-REPLACE INTO `product_fav_client` (`id`, `client_id`, `product_id`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, '2022-06-28 19:36:40', NULL);
+REPLACE INTO `product_fav_client` (`id`, `clients_id`, `products_id`, `created_at`, `updated_at`) VALUES
+	(4, 1, 1, NULL, NULL),
+	(5, 1, 2, NULL, NULL),
+	(6, 2, 1, NULL, NULL),
+	(7, 2, 2, NULL, NULL);
 /*!40000 ALTER TABLE `product_fav_client` ENABLE KEYS */;
 
 -- Volcando datos para la tabla optimovilapi.types: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `types` DISABLE KEYS */;
 REPLACE INTO `types` (`id`, `created_at`, `updated_at`, `name`) VALUES
-	(1, '2022-06-23 20:11:04', NULL, 'Marco'),
 	(2, '2022-06-23 20:11:14', NULL, 'Lentes'),
-	(3, '2022-06-23 20:11:28', NULL, 'Accesorios'),
-	(4, '2022-06-23 20:11:35', NULL, 'Estuche');
+	(3, '2022-06-23 20:11:28', '2022-06-29 06:11:07', 'Accesorio'),
+	(4, '2022-06-23 20:11:35', NULL, 'Estuche'),
+	(5, '2022-06-29 06:10:55', NULL, 'Marco');
 /*!40000 ALTER TABLE `types` ENABLE KEYS */;
 
 -- Volcando datos para la tabla optimovilapi.users: ~0 rows (aproximadamente)
